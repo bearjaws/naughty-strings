@@ -1,0 +1,32 @@
+{
+  "name": "naughty-strings",
+  "version": "1.0.0",
+  "description": "From the Big List of Naughty Strings, made testing friendly",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "lodash.samplesize": "4.2.0"
+  },
+  "devDependencies": {
+    "lodash.camelcase": "4.3.0",
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "naughty",
+    "string",
+    "testing",
+    "unicode",
+    "errors",
+    "unicode",
+    "whitespace",
+    "sql",
+    "injection",
+    "XSS"
+  ],
+  "author": "bearjaws",
+  "license": "ISC"
+}
