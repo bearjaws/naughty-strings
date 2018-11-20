@@ -49,10 +49,25 @@ describe('Naughty', function() {
 
     describe('class functionality', function() {
         it('should return one item if no argument is passed', function() {
-            expect(naughty.emoji()).to.be.a.string;
+            let emoji = naughty.emoji();
+            let found = naughty.emoji(false).indexOf(emoji);
+            expect(emoji).to.be.a.string;
+            expect(found).to.be.greaterThan(-1);
+        });
+
+        it('should not run out of elements', function() {
+            let emojis = [];
+            for (let x = 0; x < 100; x++) {
+                emojis.push(naughty.emoji());
+            }
+            expect(emojis.length).to.equal(100);
+            expect(emojis[99]).to.be.a.string;
+            let found = naughty.emoji(false).indexOf(emojis[99]);
+            expect(found).to.be.greaterThan(-1);
         });
 
         it('should return many items if argument is >0', function() {
+            console.log(naughty.emoji(4));// every build can use some emojis
             expect(naughty.emoji(4)).to.be.an('array');
         });
 

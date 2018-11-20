@@ -10,7 +10,7 @@ class NaughtyStrings {
         if (!isNumber(number) || number === 0) {
             number = stringsJson[key].length
         } else if (number === 1) {
-            return Buffer.from(sample(stringsJson[key], 1)[0][0], 'base64').toString();
+            return Buffer.from(sample(stringsJson[key], 1)[0], 'base64').toString();
         }
         let selected = sample(stringsJson[key], number);
         let stringified = [];
@@ -20,154 +20,124 @@ class NaughtyStrings {
         return stringified;
     }
 
-    static reservedStrings(number) {
-        let key = 'reservedStrings';
-        return this._getItems(key, number);
+    static reservedStrings(number = 1) {
+        return this._getItems('reservedStrings', number);
     }
     
-    static numericStrings(number) {
-        let key = 'numericStrings';
-        return this._getItems(key, number);
+    static numericStrings(number = 1) {
+        return this._getItems('numericStrings', number);
     }
     
-    static specialCharacters(number) {
-        let key = 'specialCharacters';
-        return this._getItems(key, number);
+    static specialCharacters(number = 1) {
+        return this._getItems('specialCharacters', number);
     }
     
-    static unicodeSymbols(number) {
-        let key = 'unicodeSymbols';
-        return this._getItems(key, number);
+    static unicodeSymbols(number = 1) {
+        return this._getItems('unicodeSymbols', number);
     }
     
-    static unicodeSubscriptSuperscriptAccents(number) {
-        let key = 'unicodeSubscriptSuperscriptAccents';
-        return this._getItems(key, number);
+    static unicodeSubscriptSuperscriptAccents(number = 1) {
+        return this._getItems('unicodeSubscriptSuperscriptAccents', number);
     }
     
-    static quotationMarks(number) {
-        let key = 'quotationMarks';
-        return this._getItems(key, number);
+    static quotationMarks(number = 1) {
+        return this._getItems('quotationMarks', number);
     }
     
-    static twoByteCharacters(number) {
-        let key = 'twoByteCharacters';
-        return this._getItems(key, number);
+    static twoByteCharacters(number = 1) {
+        return this._getItems('twoByteCharacters', number);
     }
     
-    static japaneseEmoticons(number) {
-        let key = 'japaneseEmoticons';
-        return this._getItems(key, number);
+    static japaneseEmoticons(number = 1) {
+        return this._getItems('japaneseEmoticons', number);
     }
     
-    static emoji(number) {
-        let key = 'emoji';
-        return this._getItems(key, number);
+    static emoji(number = 1) {
+        return this._getItems('emoji', number);
     }
     
-    static regionalIndicatorSymbols(number) {
-        let key = 'regionalIndicatorSymbols';
-        return this._getItems(key, number);
+    static regionalIndicatorSymbols(number = 1) {
+        return this._getItems('regionalIndicatorSymbols', number);
     }
     
-    static unicodeNumbers(number) {
-        let key = 'unicodeNumbers';
-        return this._getItems(key, number);
+    static unicodeNumbers(number = 1) {
+        return this._getItems('unicodeNumbers', number);
     }
     
-    static rightToLeftStrings(number) {
-        let key = 'rightToLeftStrings';
-        return this._getItems(key, number);
+    static rightToLeftStrings(number = 1) {
+        return this._getItems('rightToLeftStrings', number);
     }
     
-    static trickUnicode(number) {
-        let key = 'trickUnicode';
-        return this._getItems(key, number);
+    static trickUnicode(number = 1) {
+        return this._getItems('trickUnicode', number);
     }
     
-    static zalgoText(number) {
-        let key = 'zalgoText';
-        return this._getItems(key, number);
+    static zalgoText(number = 1) {
+        return this._getItems('zalgoText', number);
     }
     
-    static unicodeUpsidedown(number) {
-        let key = 'unicodeUpsidedown';
-        return this._getItems(key, number);
+    static unicodeUpsidedown(number = 1) {
+        return this._getItems('unicodeUpsidedown', number);
     }
     
-    static unicodeFont(number) {
-        let key = 'unicodeFont';
-        return this._getItems(key, number);
+    static unicodeFont(number = 1) {
+        return this._getItems('unicodeFont', number);
     }
     
-    static scriptInjection(number) {
-        let key = 'scriptInjection';
-        return this._getItems(key, number);
+    static scriptInjection(number = 1) {
+        return this._getItems('scriptInjection', number);
     }
     
-    static sqlInjection(number) {
-        let key = 'sqlInjection';
-        return this._getItems(key, number);
+    static sqlInjection(number = 1) {
+        return this._getItems('sqlInjection', number);
     }
     
-    static serverCodeInjection(number) {
-        let key = 'serverCodeInjection';
-        return this._getItems(key, number);
+    static serverCodeInjection(number = 1) {
+        return this._getItems('serverCodeInjection', number);
     }
     
-    static commandInjectionRuby(number) {
-        let key = 'commandInjectionRuby';
-        return this._getItems(key, number);
+    static commandInjectionRuby(number = 1) {
+        return this._getItems('commandInjectionRuby', number);
     }
     
-    static xxeInjectionXml(number) {
-        let key = 'xxeInjectionXml';
-        return this._getItems(key, number);
+    static xxeInjectionXml(number = 1) {
+        return this._getItems('xxeInjectionXml', number);
     }
     
-    static unwantedInterpolation(number) {
-        let key = 'unwantedInterpolation';
-        return this._getItems(key, number);
+    static unwantedInterpolation(number = 1) {
+        return this._getItems('unwantedInterpolation', number);
     }
     
-    static fileInclusion(number) {
-        let key = 'fileInclusion';
-        return this._getItems(key, number);
+    static fileInclusion(number = 1) {
+        return this._getItems('fileInclusion', number);
     }
     
-    static knownCvEsAndVulnerabilities(number) {
-        let key = 'knownCvEsAndVulnerabilities';
-        return this._getItems(key, number);
+    static knownCvEsAndVulnerabilities(number = 1) {
+        return this._getItems('knownCvEsAndVulnerabilities', number);
     }
     
-    static msdosWindowsSpecialFilenames(number) {
-        let key = 'msdosWindowsSpecialFilenames';
-        return this._getItems(key, number);
+    static msdosWindowsSpecialFilenames(number = 1) {
+        return this._getItems('msdosWindowsSpecialFilenames', number);
     }
     
-    static ircSpecificStrings(number) {
-        let key = 'ircSpecificStrings';
-        return this._getItems(key, number);
+    static ircSpecificStrings(number = 1) {
+        return this._getItems('ircSpecificStrings', number);
     }
     
-    static scunthorpeProblem(number) {
-        let key = 'scunthorpeProblem';
-        return this._getItems(key, number);
+    static scunthorpeProblem(number = 1) {
+        return this._getItems('scunthorpeProblem', number);
     }
     
-    static humanInjection(number) {
-        let key = 'humanInjection';
-        return this._getItems(key, number);
+    static humanInjection(number = 1) {
+        return this._getItems('humanInjection', number);
     }
     
-    static terminalEscapeCodes(number) {
-        let key = 'terminalEscapeCodes';
-        return this._getItems(key, number);
+    static terminalEscapeCodes(number = 1) {
+        return this._getItems('terminalEscapeCodes', number);
     }
     
-    static iOsVulnerability(number) {
-        let key = 'iOsVulnerability';
-        return this._getItems(key, number);
+    static iOsVulnerability(number = 1) {
+        return this._getItems('iOsVulnerability', number);
     }
     
 }

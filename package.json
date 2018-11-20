@@ -11,14 +11,17 @@
     "lodash.samplesize": "4.2.0"
   },
   "devDependencies": {
+    "eslint": "5.9.0",
     "chai": "4.2.0",
     "lodash.camelcase": "4.3.0",
     "mocha": "5.2.0"
   },
   "scripts": {
-    "test": "mocha test/",
-    "build": "node generate_class.js",
-    "parseData": "node generated-string-map.js"
+    "lint": "eslint .",
+    "cleanup": "eslint . --fix",
+    "test": "npm run build && mocha test/",
+    "build": "node ./generate-class.js",
+    "parseData": "node generate-string-map.js"
   },
   "keywords": [
     "naughty",
