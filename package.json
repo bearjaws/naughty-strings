@@ -20,8 +20,8 @@
     "lint": "eslint .",
     "cleanup": "eslint . --fix",
     "test": "npm run build && mocha test/",
-    "build": "node ./generate-class.js",
-    "parseData": "node generate-string-map.js"
+    "build": "npm run parseData && node ./generate_class.js && node ./generate_readme.js",
+    "parseData": "node generate_string_map.js"
   },
   "keywords": [
     "naughty",

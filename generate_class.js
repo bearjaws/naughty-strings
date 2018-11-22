@@ -1,6 +1,6 @@
 const fs = require('fs');
 const stringsJson = require('./mapped_strings');
-const functionSectionMap = {
+const functionSectionMap = { // @todo merge these insane names into something more concise
     'unicode': [
         'nonWhitespaceC0ControlsU0001ThroughU0008U000EThroughU001F',
         'nonWhitespaceC1ControlsU0080ThroughU0084AndU0086ThroughU009F',
@@ -41,9 +41,6 @@ class NaughtyStrings {
 `;
 
 for (let key of Object.keys(stringsJson)) {
-    if (ignoredKeys.indexOf(key) !== -1) {
-        continue;
-    }
     // tabbed in to clean up white space formatting in generated class.
     index += `
     static ${key}(number = 1) {

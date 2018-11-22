@@ -32,6 +32,26 @@ class NaughtyStrings {
         return this._getItems('specialCharacters', number);
     }
     
+    static nonWhitespaceC0ControlsU0001ThroughU0008U000EThroughU001F(number = 1) {
+        return this._getItems('nonWhitespaceC0ControlsU0001ThroughU0008U000EThroughU001F', number);
+    }
+    
+    static nonWhitespaceC1ControlsU0080ThroughU0084AndU0086ThroughU009F(number = 1) {
+        return this._getItems('nonWhitespaceC1ControlsU0080ThroughU0084AndU0086ThroughU009F', number);
+    }
+    
+    static whitespaceAllOfTheCharactersWithCategoryZsZlOrZpInUnicode(number = 1) {
+        return this._getItems('whitespaceAllOfTheCharactersWithCategoryZsZlOrZpInUnicode', number);
+    }
+    
+    static unicodeAdditionalControlCharactersAllOfTheCharactersWith(number = 1) {
+        return this._getItems('unicodeAdditionalControlCharactersAllOfTheCharactersWith', number);
+    }
+    
+    static byteOrderMarksUFeffAndUFffeEachOnItsOwnLine(number = 1) {
+        return this._getItems('byteOrderMarksUFeffAndUFffeEachOnItsOwnLine', number);
+    }
+    
     static unicodeSymbols(number = 1) {
         return this._getItems('unicodeSymbols', number);
     }
@@ -46,6 +66,10 @@ class NaughtyStrings {
     
     static twoByteCharacters(number = 1) {
         return this._getItems('twoByteCharacters', number);
+    }
+    
+    static specialUnicodeCharactersUnion(number = 1) {
+        return this._getItems('specialUnicodeCharactersUnion', number);
     }
     
     static japaneseEmoticons(number = 1) {

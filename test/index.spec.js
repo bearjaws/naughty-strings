@@ -3,12 +3,22 @@ const expect = chai.expect;
 const naughty = require('../index');
 
 let methods = [
+    'length',
+    'prototype',
+    '_getItems',
     'reservedStrings',
     'numericStrings',
     'specialCharacters',
+    'nonWhitespaceC0ControlsU0001ThroughU0008U000EThroughU001F',
+    'nonWhitespaceC1ControlsU0080ThroughU0084AndU0086ThroughU009F',
+    'whitespaceAllOfTheCharactersWithCategoryZsZlOrZpInUnicode',
+    'unicodeAdditionalControlCharactersAllOfTheCharactersWith',
+    'byteOrderMarksUFeffAndUFffeEachOnItsOwnLine',
     'unicodeSymbols',
+    'unicodeSubscriptSuperscriptAccents',
     'quotationMarks',
     'twoByteCharacters',
+    'specialUnicodeCharactersUnion',
     'japaneseEmoticons',
     'emoji',
     'regionalIndicatorSymbols',
@@ -32,11 +42,7 @@ let methods = [
     'humanInjection',
     'terminalEscapeCodes',
     'iOsVulnerability',
-    '_getItems',
-    'length',
-    'name',
-    'unicodeSubscriptSuperscriptAccents',
-    'prototype'
+    'name'
 ];
 
 
